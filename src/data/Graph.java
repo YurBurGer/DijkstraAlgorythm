@@ -1,6 +1,5 @@
 package data;
 
-
 public class Graph {
 	private Vertex[] graph;
 	public Graph(int count) {
@@ -13,11 +12,15 @@ public class Graph {
 	public void addUnorientedEdge(int from, int to, int weight){
 		this.graph[from].addEdge(to,weight);
 		this.graph[to].addEdge(from,weight);
+		
 	}
 	public void addOrientedEdge(int from, int to, int weight){
-		this.graph[from].addEdge(to, weight);
+		this.graph[from].addEdge(to, weight);		
 	}
 	public Vertex getVertex(Integer num){
 		return graph[num];
+	}
+	public Vertex[] getAll(){
+		return graph;
 	}
 }

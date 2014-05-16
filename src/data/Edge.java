@@ -2,7 +2,7 @@ package data;
 
 public class Edge implements Comparable<Edge>{
 	private Integer endPoint;
-	private int weight;
+	private Integer weight;
 	public Integer getEndPoint() {
 		return endPoint;
 	}
@@ -22,6 +22,6 @@ public class Edge implements Comparable<Edge>{
 	}
 	@Override
 	public int compareTo(Edge arg0) {
-		return this.endPoint.compareTo(arg0.endPoint);
+		return this.weight.compareTo(arg0.weight);
 	}
 }
